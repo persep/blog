@@ -1,7 +1,11 @@
 Blog::Application.routes.draw do
   resources :comments
 
-  resources :posts
+  # Create  a  nested  resource  for  comments  within  posts
+  # /posts/:post_id/comments
+  resources :posts do
+    resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
