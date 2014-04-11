@@ -1,5 +1,5 @@
 Blog::Application.routes.draw do
-  resources :comments
+  #resources :comments # Users will only view comments from a post and not directly
 
   # Create  a  nested  resource  for  comments  within  posts
   # /posts/:post_id/comments
